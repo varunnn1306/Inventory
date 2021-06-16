@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Size="300,150"
+             Color="White"
+             xct:ShadowEffect.Color="Black"
+             x:Class="Inventory.ChangeSearchMode">
+    <StackLayout Padding="30" Spacing="20">
+        <Label x:Name="label" Text="Change Search Mode" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+               FontSize="15" BackgroundColor="Transparent" TextColor="DarkSalmon"/>
+        <Picker x:Name="searchModePicker" VerticalOptions="Center" WidthRequest="50" 
+                SelectedIndexChanged="searchModePicker_SelectedIndexChanged" FontSize="15"/>
+    </StackLayout>
+</xct:Popup>

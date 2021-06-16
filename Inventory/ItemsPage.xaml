@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Inventory.ItemsPage"
+             Title="Inventory">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Search" 
+                     Clicked="ToolbarItem_Clicked_1"/>
+        <ToolbarItem Text="Add Item" 
+                     Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="0" Padding="10">
+            <Frame BackgroundColor="Salmon" Padding="0" BorderColor="Black">
+                <Grid ColumnSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                        <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                        <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                        <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                    <BoxView WidthRequest="1" Grid.Row="0" Grid.Column="0"
+                             BackgroundColor="Black" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                    <BoxView WidthRequest="1" Grid.Row="0" Grid.Column="1"
+                             BackgroundColor="Black" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                    <BoxView WidthRequest="1" Grid.Row="0" Grid.Column="2"
+                             BackgroundColor="Black" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                    <BoxView WidthRequest="1" Grid.Row="0" Grid.Column="3"
+                             BackgroundColor="Black" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+
+                    <Label Grid.Row="0" Grid.Column="0" VerticalOptions="Center" 
+                       HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="Black">Item</Label>
+                    <Label Grid.Row="0" Grid.Column="1" VerticalOptions="Center" 
+                       HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="Black">Floor</Label>
+                    <Label Grid.Row="0" Grid.Column="2" VerticalOptions="Center" 
+                       HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="Black">Room</Label>
+                    <Label Grid.Row="0" Grid.Column="3" VerticalOptions="Center" 
+                       HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="Black">Place</Label>
+
+                </Grid>
+            </Frame>
+
+            <ListView x:Name="itemListView"
+                    ItemTapped="itemListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnSpacing="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <BoxView WidthRequest="1" Grid.Row="0" Grid.Column="0"
+                                         BackgroundColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand"/>
+                                <BoxView WidthRequest="1" Grid.Row="0" Grid.Column="0"
+                                    BackgroundColor="Black" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                                <BoxView WidthRequest="1" Grid.Row="0" Grid.Column="1"
+                                    BackgroundColor="Black" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                                <BoxView WidthRequest="1" Grid.Row="0" Grid.Column="2"
+                                    BackgroundColor="Black" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                                <BoxView WidthRequest="1" Grid.Row="0" Grid.Column="3"
+                                    BackgroundColor="Black" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+
+                                <Label Text="{Binding ItemName}" VerticalOptions="CenterAndExpand" 
+                                    HorizontalOptions="CenterAndExpand" TextColor="Black" Grid.Row="0" Grid.Column="0"/>
+                                <Label Text="{Binding Floor}" VerticalOptions="CenterAndExpand" 
+                                    HorizontalOptions="CenterAndExpand" TextColor="Black" Grid.Row="0" Grid.Column="1"/>
+                                <Label Text="{Binding Room}" VerticalOptions="CenterAndExpand" 
+                                    HorizontalOptions="CenterAndExpand" TextColor="Black" Grid.Row="0" Grid.Column="2"/>
+                                <Label Text="{Binding Place}" VerticalOptions="CenterAndExpand" 
+                                    HorizontalOptions="CenterAndExpand" TextColor="Black" Grid.Row="0" Grid.Column="3"/>
+
+                                <BoxView BackgroundColor="Black" HeightRequest="1" WidthRequest="100" Grid.Row="0" Grid.Column="0" VerticalOptions="End"/>
+                                <BoxView BackgroundColor="Black" HeightRequest="1" WidthRequest="100" Grid.Row="0" Grid.Column="1" VerticalOptions="End"/>
+                                <BoxView BackgroundColor="Black" HeightRequest="1" WidthRequest="100" Grid.Row="0" Grid.Column="2" VerticalOptions="End"/>
+                                <BoxView BackgroundColor="Black" HeightRequest="1" WidthRequest="100" Grid.Row="0" Grid.Column="3" VerticalOptions="End"/>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>        
+    </ContentPage.Content>
+</ContentPage>

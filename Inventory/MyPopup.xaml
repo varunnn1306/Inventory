@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Size="300,150"
+             Color="White"
+             xct:ShadowEffect.Color="Black"
+             x:Class="Inventory.MyPopup">
+    <StackLayout>
+        <Label Text="Please Fill All the Information" VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand" FontSize="30" TextColor="Red" HorizontalTextAlignment="Center"/>
+    </StackLayout>
+    
+</xct:Popup>
